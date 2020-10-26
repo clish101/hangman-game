@@ -1,6 +1,11 @@
+import Hangman from './hangman';
+import uuidv4 from 'uuid/v4';
+import getPuzzle from './requests';
 const Hword = document.querySelector('#puzzle');
 const Hguess = document.querySelector('#guesses');
 const Hinput = document.querySelector('#inputing');
+
+console.log(uuidv4());
 
 let game;
 
@@ -52,21 +57,21 @@ startGame();
 //     console.log(`Error ${err}`);
 //   });
 
-getLocation()
-  .then((myLocation) => {
-    return countryDetails(myLocation.country);
-  })
-  .then((country) => {
-    console.log(country.name);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// getLocation()
+//   .then((myLocation) => {
+//     return countryDetails(myLocation.country);
+//   })
+//   .then((country) => {
+//     console.log(country.name);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
-getCurrentCountry()
-  .then((myLocation) => {
-    console.log(myLocation.name);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// getCurrentCountry()
+//   .then((myLocation) => {
+//     console.log(myLocation.name);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });

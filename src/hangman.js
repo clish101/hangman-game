@@ -64,3 +64,5 @@ class Hangman {
     return wording;
   }
 }
+
+export { Hangman as default };
